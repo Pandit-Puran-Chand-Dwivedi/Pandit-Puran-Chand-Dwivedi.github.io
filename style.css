@@ -1,8 +1,99 @@
-body {
-  font-family: Arial;
-  padding: 20px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-img {
-  margin: 10px;
+body {
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+}
+
+/* Video Background */
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.video-bg iframe {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Dark overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.65);
+  z-index: -1;
+}
+
+/* Content */
+.content {
+  padding: 40px 10%;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin: 30px 0 10px;
+  color: #ffd27d;
+}
+
+p, li {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "🔱 ";
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.gallery img {
+  width: 240px;
+  border-radius: 10px;
+  border: 2px solid #ffd27d;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .content {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .gallery img {
+    width: 100%;
+  }
 }
