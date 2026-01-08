@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-/* FULL PAGE BACKGROUND IMAGE */
 body {
   font-family: "Segoe UI", sans-serif;
   color: #ffffff;
@@ -15,42 +14,54 @@ body {
   background-attachment: fixed;
 }
 
-/* DARK OVERLAY */
 .content {
   min-height: 100vh;
   padding: 40px 10%;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.7);
 }
 
-/* HEADER */
+.lang-toggle {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 999;
+}
+
+.lang-toggle button {
+  margin-left: 5px;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  background: #ffd27d;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
 header {
   text-align: center;
   margin-bottom: 40px;
 }
 
 header h1 {
-  font-size: 44px;
+  font-size: 42px;
   color: #ffd27d;
-  text-shadow: 2px 2px 8px #000;
 }
 
 header p {
-  font-size: 18px;
   margin-top: 10px;
+  font-size: 18px;
 }
 
-/* SECTIONS */
 section {
   margin-bottom: 40px;
 }
 
 h2 {
+  font-size: 26px;
   color: #ffd27d;
   margin-bottom: 15px;
-  font-size: 28px;
   border-bottom: 2px solid #ffd27d;
   display: inline-block;
-  padding-bottom: 5px;
 }
 
 p, li {
@@ -58,20 +69,14 @@ p, li {
   line-height: 1.7;
 }
 
-/* SERVICES LIST */
 ul {
   list-style: none;
-}
-
-ul li {
-  margin-bottom: 8px;
 }
 
 ul li::before {
   content: "🔱 ";
 }
 
-/* GALLERY */
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -79,35 +84,50 @@ ul li::before {
 }
 
 .gallery img {
-  width: 240px;
-  border-radius: 12px;
+  width: 230px;
+  border-radius: 10px;
   border: 2px solid #ffd27d;
-  box-shadow: 0 0 10px rgba(0,0,0,0.7);
 }
 
-/* CONTACT */
-.contact p {
-  font-size: 20px;
+a {
+  color: #ffd27d;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-/* FOOTER */
 footer {
   text-align: center;
-  margin-top: 40px;
   font-size: 14px;
   opacity: 0.8;
 }
 
-/* MOBILE RESPONSIVE */
+/* Floating Appointment Button */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: #000;
+  padding: 15px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 1000;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  transition: 0.3s;
+}
+
+.floating-btn:hover {
+  opacity: 0.85;
+}
+
 @media (max-width: 768px) {
   .content {
     padding: 20px;
   }
-
   header h1 {
     font-size: 30px;
   }
-
   .gallery img {
     width: 100%;
   }
